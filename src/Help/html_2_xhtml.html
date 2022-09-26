@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+ <title>Scribe! - Hilfe</title>
+ <meta name="generator" content="Scribe! 2 [http://scribe.de]" />
+ <meta name="author" content="Jan Uhlenbrok" />
+ <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+
+<body>
+<p align="center">
+<span class="header">( X ) H T M L</span><br />
+<span class="subheader">Von HTML zu XHTML</span>
+</p>
+<p align="justify">
+Gl&uuml;cklicherweise besitzt Scribe! unter <span class="menue">&nbsp;Scribe! - Tools/XHTML - Konverter...&nbsp;</span> ein Werkzeug, da&szlig; Ihnen den gr&ouml;&szlig;ten Teil der Umwandlung abnimmt.
+Trotzdem mu&szlig; das Dokument noch einmal per Mensch &uuml;berpr&uuml;ft werden.<br /><br />
+Der Konverter nimmt folgende &Auml;nderungen am Quelltext vor:
+<ul>
+ <li>Tags werden XHTML-konform gemacht (<span class="arrow">&raquo;</span>&nbsp;<a href="#differences" class="normal">Unterschiede zu HTML</a>)</li>
+ <li>Alle Sonderzeichen werden in XHTML - Code umgewandelt</li>
+ <li>Der <span class="tag">&lt;title&gt;</span> - Tag wird an die richtige Position gesetzt</li>
+ <li>Listen- und Auswahleinträge k&ouml;nnen komplettiert werden</li>
+ <li>Die DTD sowie die XML - Version werden angepasst</li>
+</ul>
+<hr />
+Nach der automatischen Konvertierung sind Sie gefragt. Unter <span class="arrow">&raquo;</span>&nbsp;<a href="http://validator.w3.org/file-upload.html" target="_blank" class="normal">http://validator.w3.org/file-upload.html</a> k&ouml;nnen Sie &uuml;berpr&uuml;fen, ob das Dokument nun wirklich schon XHTML-konform ist. Wenn nein, so werden die Fehler angezeigt. Beliebte Fehler sind das Vergessen von abschlie&szlig;enden Tags (passiert h&auml;ufig beim <span class="tag">&lt;p&gt;</span> - Tag) und Stellungsfehler von Tags.<br />
+<hr />
+Als Letztes sollte noch sichergestellt werden, da&szlig; der XHTML - Modus von Scribe! aktiviert ist. Diese Option befindet sich unter <span class="menue">&nbsp;Scribe! - Tools/Optionen...&nbsp;</span>.
+<br /><br /><br />
+<img src="graphics/tip.gif" alt="" height="16" width="16" border="0" />
+<span class="subsubheader"><a name="differences" id="differences">Unterschiede der Tags in HTML und XHTML</span>
+<ul>
+ <li>Alle Tags und deren Attribute m&uuml;ssen von nun an kleingeschrieben werden</li>
+ <li>Hat ein Tag keinen abschlie&szlig;enden Tag (zum Beispiel bei <span class="tag">&lt;br&gt;</span> oder <span class="tag">&lt;img&gt;</span>), wird ein Schr&auml;gstrich vor die hintere spitze Klammer gesetzt</li>
+ <li>Tags, zu denen ein abschlie&szlig;ender Tag geh&ouml;rt, m&uuml;ssen mit diesem auch abgeschlossen werden</li>
+ <li>Die Wertzuweisungen der Attribute m&uuml;ssen von Anf&uuml;hrungszeichen eingeschlossen sein</li>
+ <li>Attribute ohne Wertzuweisungen (zum Beispiel <span class="tag_attrs">noshade</span> oder <span class="tag_attrs">readonly</span>) existieren in XHTML nicht, auch ihnen muß ein Wert zugewiesen werden</li>
+</ul>
+</p>
+</body>
+</html>

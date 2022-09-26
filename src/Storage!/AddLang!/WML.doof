@@ -1,0 +1,13 @@
+[Menu items]
+Hyperlink...=ahref
+Grafik...=img
+-=-
+Tabelle...=table
+Zeile...=col
+
+[Other stuff]
+HelpFile=helpfile.hlp
+Template=WML.sct
+StandardExtension=.wml
+Extensions=wml;swml;
+Description=WML - Dokument

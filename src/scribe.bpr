@@ -1,0 +1,278 @@
+# ---------------------------------------------------------------------------
+!if !$d(BCB)
+BCB = $(MAKEDIR)\..
+!endif
+
+# ---------------------------------------------------------------------------
+# IDE-ABSCHNITT
+# ---------------------------------------------------------------------------
+# Der folgende Abschnitt der Make-Datei des Projekts wird von der IDE verwaltet.
+# Wir empfehlen, Änderungen an diesem Abschnitt nur über die IDE
+# vorzunehmen.
+# ---------------------------------------------------------------------------
+
+VERSION = BCB.04.04
+# ---------------------------------------------------------------------------
+PROJECT = scribe.exe
+OBJFILES = gifimage.obj ..\..\Cponents\TTopStyle\u_TopStyleIntegration.obj scribe.obj \
+  main.obj addluni.obj child.obj openinet.obj neudia.obj neuproj.obj info.obj \
+  grapview.obj suche.obj hilfed.obj ibrowse.obj ftpprofi.obj newlink.obj \
+  tipoday.obj plugin.obj button.obj hyper.obj ankerdia.obj email.obj image.obj \
+  trennli.obj multim.obj meta.obj include.obj schriftd.obj schnellf.obj para.obj \
+  abschni.obj listedia.obj proback.obj seitprop.obj grafkata.obj thumbs.obj \
+  tablewiz.obj table.obj zeiledia.obj caption.obj kopfzell.obj zelledia.obj \
+  cssedit.obj xhtmlcon.obj incakt.obj lcheck.obj buttonta.obj auswahle.obj \
+  checkb.obj radio.obj verstfe.obj eingabe.obj password.obj textfel.obj \
+  absenden.obj auswahl.obj formula.obj frameass.obj fastta.obj frameber.obj \
+  eiframe.obj iframe.obj welcome.obj bsuchen.obj seitenass.obj download.obj \
+  options.obj javascr.obj ftpprops.obj ftppass.obj
+RESFILES = scribe.res
+RESDEPEN = $(RESFILES) main.dfm addluni.dfm child.dfm openinet.dfm neudia.dfm neuproj.dfm \
+  info.dfm grapview.dfm suche.dfm hilfed.dfm ibrowse.dfm ftpprofi.dfm newlink.dfm \
+  tipoday.dfm plugin.dfm button.dfm hyper.dfm ankerdia.dfm email.dfm image.dfm \
+  trennli.dfm multim.dfm meta.dfm include.dfm schriftd.dfm schnellf.dfm para.dfm \
+  abschni.dfm listedia.dfm proback.dfm seitprop.dfm grafkata.dfm thumbs.dfm \
+  tablewiz.dfm table.dfm zeiledia.dfm caption.dfm kopfzell.dfm zelledia.dfm \
+  cssedit.dfm xhtmlcon.dfm incakt.dfm lcheck.dfm buttonta.dfm auswahle.dfm \
+  checkb.dfm radio.dfm verstfe.dfm eingabe.dfm password.dfm textfel.dfm \
+  absenden.dfm auswahl.dfm formula.dfm frameass.dfm fastta.dfm frameber.dfm \
+  eiframe.dfm iframe.dfm welcome.dfm bsuchen.dfm seitenass.dfm download.dfm \
+  options.dfm javascr.dfm ftpprops.dfm ftppass.dfm
+LIBFILES = ..\..\Cponents\THTTPGet\INET.LIB
+LIBRARIES = TCabes.lib dclocx40.lib VCLJPG40.lib MonFTP.lib DCLUSR40.lib cred.lib \
+  HTTPGETs.lib ecm.lib VCLX40.lib fileex.lib NLS.lib VCL40.lib
+SPARELIBS = VCL40.lib NLS.lib fileex.lib VCLX40.lib ecm.lib HTTPGETs.lib cred.lib \
+  DCLUSR40.lib MonFTP.lib VCLJPG40.lib dclocx40.lib TCabes.lib
+PACKAGES = VCL40.bpi VCLX40.bpi dclusr40.bpi MonFTP.bpi ecm.bpi \
+  fileex.bpi dclocx40.bpi
+DEFFILE =
+# ---------------------------------------------------------------------------
+PATHCPP = .;
+PATHASM = .;
+PATHPAS = .;..\..\Cponents\TTopStyle
+PATHRC = .;
+DEBUGLIBPATH = $(BCB)\lib\debug
+RELEASELIBPATH = $(BCB)\lib\release
+USERDEFINES =
+SYSDEFINES = NO_STRICT
+# ---------------------------------------------------------------------------
+CFLAG1 = -I..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn \
+  -Od -Hc -H=$(BCB)\lib\vcl40.csm -w -Ve -r- -a8 -k -y -v -vi- -c -b- -w-par \
+  -w-inl -Vx -tW -tWM -D$(SYSDEFINES);$(USERDEFINES)
+PFLAGS = -U..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(RELEASELIBPATH) \
+  -I..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn \
+  -$YD -$W -$O- -v -JPHNE -M
+RFLAGS = -i..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn
+AFLAGS = /i..\..\Cponents\TTopStyle /i$(BCB)\cponents\tcabes /i$(BCB)\Lib \
+  /i$(BCB)\cponents\tmftp\src /i$(BCB)\cponents\tcredits \
+  /i$(BCB)\cponents\thttpget /i$(BCB)\cponents\plusm /i$(BCB)\cponents\tfileex \
+  /i$(BCB)\cponents\tnls /i..\..\Projects /iS!2 /i$(BCB)\include \
+  /i$(BCB)\include\vcl /i$(BCB)\cponents\TEnv /i$(BCB)\cponents\TMSIE \
+  /i$(BCB)\cponents\TTopStyle /i$(BCB)\cponents\HTTPOn /mx /w2 /zd
+LFLAGS = -L..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(RELEASELIBPATH) \
+  -aa -Tpe -x -Gn -v
+# ---------------------------------------------------------------------------
+ALLOBJ = c0w32.obj sysinit.obj $(OBJFILES)
+ALLRES = $(RESFILES)
+ALLLIB = $(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib
+# ---------------------------------------------------------------------------
+!ifdef IDEOPTIONS
+
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=2
+MinorVer=2
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1031
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=none
+FileDescription=Scribe! - [ web editor ]
+FileVersion=2.2.0.0
+InternalName=generation x
+LegalCopyright=© Copyright 2000-2003 by Jan Uhlenbrok
+LegalTrademarks=kein
+OriginalFilename=scribe.exe
+ProductName=Scribe!
+ProductVersion=2.2.0.0
+Comments=Freeware
+
+[HistoryLists\hlIncludePath]
+Count=30
+Item0=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn
+Item1=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn
+Item2=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle;$(BCB)\cponents\HTTPOn
+Item3=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item4=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item5=$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item6=$(BCB)\cponents\tcabes;$(BCB)\Lib;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item7=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item8=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item9=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item10=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item11=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE;$(BCB)\cponents\TTopStyle
+Item12=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE
+Item13=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE
+Item14=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE
+Item15=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print;$(BCB)\cponents\TMSIE
+Item16=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print
+Item17=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\PlusM\Print
+Item18=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder
+Item19=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv\CBuilder
+Item20=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High;$(BCB)\cponents\TEnv
+Item21=$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High
+Item22=$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High
+Item23=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High
+Item24=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter;$(BCB)\cponents\PlusM\High
+Item25=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter
+Item26=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter
+Item27=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter
+Item28=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM\Gutter
+Item29=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\include;$(BCB)\include\vcl;$(BCB)\cponents\PlusM;$(BCB)\cponents\PlusM\Gutter
+
+[HistoryLists\hlLibraryPath]
+Count=30
+Item0=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\TEnv;$(BCB)\cponents\TMSIE
+Item1=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item2=..\..\Cponents\TTopStyle;$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item3=$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item4=$(BCB)\cponents\tcabes;$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item5=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item6=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item7=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item8=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item9=$(BCB)\cponents\tmftp\src;$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item10=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item11=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print;$(BCB)\cponents\TMSIE
+Item12=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print
+Item13=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder;$(BCB)\cponents\plusm\Print
+Item14=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder
+Item15=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter;$(BCB)\cponents\TEnv\CBuilder
+Item16=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item17=$(BCB)\cponents\tcredits;$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item18=$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item19=$(BCB)\cponents\thttpget;$(BCB)\cponents\thttp\delphi\vc32;..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item20=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item21=..\..\Cponents\TAdvGrid;$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item22=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item23=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\cponents\plusm\gutter
+Item24=$(BCB)\cponents\plusm;$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item25=$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item26=$(BCB)\cponents\tfileex;$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item27=$(BCB)\cponents\tnls;..;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item28=$(BCB)\cponents\tnls;..\..\Projects;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item29=..\;S!2;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+InMemoryExe=0
+ShowInfoMsgs=0
+
+!endif
+
+# ---------------------------------------------------------------------------
+# MAKE-ABSCHNITT
+# ---------------------------------------------------------------------------
+# Der folgende Abschnitt der Datei des Projekts wird nicht von der IDE verwendet. Er ist
+# für das Erstellen von der Befehlszeile mit dem Programm MAKE gedacht.
+# ---------------------------------------------------------------------------
+
+.autodepend
+# ---------------------------------------------------------------------------
+!if !$d(BCC32)
+BCC32 = bcc32
+!endif
+
+!if !$d(CPP32)
+CPP32 = cpp32
+!endif
+
+!if !$d(DCC32)
+DCC32 = dcc32
+!endif
+
+!if !$d(TASM32)
+TASM32 = tasm32
+!endif
+
+!if !$d(LINKER)
+LINKER = ilink32
+!endif
+
+!if !$d(BRCC32)
+BRCC32 = brcc32
+!endif
+
+# ---------------------------------------------------------------------------
+!if $d(PATHCPP)
+.PATH.CPP = $(PATHCPP)
+.PATH.C   = $(PATHCPP)
+!endif
+
+!if $d(PATHPAS)
+.PATH.PAS = $(PATHPAS)
+!endif
+
+!if $d(PATHASM)
+.PATH.ASM = $(PATHASM)
+!endif
+
+!if $d(PATHRC)
+.PATH.RC  = $(PATHRC)
+!endif
+# ---------------------------------------------------------------------------
+$(PROJECT): $(OBJFILES) $(RESDEPEN) $(DEFFILE)
+    $(BCB)\BIN\$(LINKER) @&&!
+    $(LFLAGS) +
+    $(ALLOBJ), +
+    $(PROJECT),, +
+    $(ALLLIB), +
+    $(DEFFILE), +
+    $(ALLRES)
+!
+# ---------------------------------------------------------------------------
+.pas.hpp:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.pas.obj:
+    $(BCB)\BIN\$(DCC32) $(PFLAGS) {$< }
+
+.cpp.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.obj:
+    $(BCB)\BIN\$(BCC32) $(CFLAG1) -n$(@D) {$< }
+
+.c.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.cpp.i:
+    $(BCB)\BIN\$(CPP32) $(CFLAG1) -n. {$< }
+
+.asm.obj:
+    $(BCB)\BIN\$(TASM32) $(AFLAGS) $<, $@
+
+.rc.res:
+    $(BCB)\BIN\$(BRCC32) $(RFLAGS) -fo$@ $<
+# ---------------------------------------------------------------------------

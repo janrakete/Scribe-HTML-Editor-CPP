@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+ <title>Scribe! - Hilfe</title>
+ <meta name="generator" content="Scribe! 2 [http://scribe.de]" />
+ <meta name="author" content="Jan Uhlenbrok" />
+ <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+
+<body>
+<p align="center">
+<span class="header">D e r&nbsp;&nbsp;&nbsp;E d i t o r</span><br />
+<span class="subheader">Buttonx!</span>
+</p>
+<p align="justify">
+Buttonx! sind frei definierbare Textteile, die an einer beliebigen Stelle im Dokument eingef&uuml;gt werden k&ouml;nnen. Das Besondere dabei ist, das diese Textteile Variablen enthalten d&uuml;rfen, die beim Einf&uuml;gen durch ihren speziellen Wert ersetzt werden.<br /><br />
+Um zum Beispiel den Text &quot;Heute ist Freitag, der 22.2.02.&quot; (wobei das Datum stets das aktuelle ist) zu erhalten,  gehen Sie wie folgt vor:
+<ul>
+<li>Geben Sie als <span class="menue">&nbsp;Bezeichnung&nbsp;</span> &quot;Akt. Datum&quot; ein.</li>
+<li>F&uuml;gen Sie bei <span class="menue">&nbsp;Code&nbsp;</span> &quot;Heute ist <b>#DayN</b>, der <b>#Day/S</b>.<b>#Month/S</b>.<b>#Year/S</b>.&quot; ein.</li>
+<li>Mit <span class="menue">&nbsp;&quot;Speichern&quot;&nbsp;</span> wird der Code im Editor unter dem Registerreiter &quot;Buttonx!&quot; verf&uuml;gbar gemacht.</li>
+</ul>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="tag_attrs_caption">&nbsp;Variablen (Gro&szlig;- und Kleinschreibung beachten)</td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#SelText</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuell markierter Text im Dokument</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#ProgramPath</b></td>
+  <td class="tag_info_attrs">&nbsp;Scribe! - Verzeichnis</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#ProgramVersion</b></td>
+  <td class="tag_info_attrs">&nbsp;Scribe! - Version</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Year/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelles Jahr (2-stellig)</span></td>
+ </tr>
+
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Year</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelles Jahr (4-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#MonthN/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Name des aktuellen Monats (kurz)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#MonthN</b></td>
+  <td class="tag_info_attrs">&nbsp;Name des aktuellen Monats (lang)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Month/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktueller Monat (1-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Month</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktueller Monat (2-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#DayN/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Name des aktuellen Tages (kurz)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#DayN</b></td>
+  <td class="tag_info_attrs">&nbsp;Name des aktuellen Tages (lang)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Day/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktueller Tag (1-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Day</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktueller Tag (2-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Hour/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Stunde (1-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Hour</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Stunde (2-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Min/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Minute (1-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Min</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Minute (2-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Sec/S</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Sekunde (1-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#Sec</b></td>
+  <td class="tag_info_attrs">&nbsp;Aktuelle Sekunde (2-stellig)</span></td>
+ </tr>
+ <tr>          
+  <td class="tag_info_attrs">&nbsp;<b>#LoadFile[datei.xyz]</b></td>
+  <td class="tag_info_attrs">&nbsp;F&uuml;gt eine beliebige Datei in das Makro ein</span></td>
+ </tr>
+</table>
+
+<br /><br />
+<img src="graphics/tip.gif" alt="" height="16" width="16" border="0" />
+&Uuml;ber das Kontext - Men&uuml; (rechte Maustaste) der Buttonx! - Liste ist die Funktion <span class="menue">&nbsp;L&ouml;schen&nbsp;</span> abrufbar.
+</p>
+</body>
+</html>

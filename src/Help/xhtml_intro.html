@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+ <title>Scribe! - Hilfe</title>
+ <meta name="generator" content="Scribe! 2 [http://scribe.de]" />
+ <meta name="author" content="Jan Uhlenbrok" />
+ <link rel="stylesheet" type="text/css" href="layout.css" />
+</head>
+
+<body>
+<p align="center">
+<span class="header">( X ) H T M L</span><br />
+<span class="subheader">Einf&uuml;hrungskurs</span>
+</p>
+<p align="justify">
+Der folgende Text stellt eine kurze Einf&uuml;hrung in den Aufbau eines XHTML - Dokuments dar. Die Unterschiede zwischen XHTML und HTML sind sehr gering, trotzdem ist XHTML weitaus flexibler. Wie Sie ihre Dokumente nach XHTML umwandeln, lesen Sie <span class="arrow">&raquo;</span>&nbsp;<a href="html_2_xhtml.html" class="normal">hier</a>. Momentan unterst&uuml;tzt Scribe! noch beide Sprachenvarianten.
+<hr />
+Internet-Seiten werden in der E<b>x</b>tensible <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage geschrieben.<br /><br />
+Die Hauptbestandteile der XHTML sind Tags. Tags sind Steuerbefehle, die das Verhalten von Text steuern oder Objekte wie Grafiken einbinden.<br />Tags bestehen meist immer aus einem einleitenden Tag und einem abschließenden Tag. Die Tags sind sp&auml;ter bei der Betrachtung durch einen <span class="arrow">&raquo;</span>&nbsp;<a href="terms.html#browser" class="normal">Internet-Browser</a> nicht sichtbar. Das folgende Beispiel demonstriert, wie man eine Textformatierung erstellt:<br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">&lt;b&gt;&lt;i&gt;Dieser Text ist fett und kursiv.&lt;/i&gt;&lt;/b&gt;</td>
+ </tr>
+</table>
+<br />
+Wie Sie sehen, wurde der Beispieltext von 2 Tags formatiert, <span class="tag">&lt;b&gt;</span> bzw. <span class="tag">&lt;/b&gt;</span> f&uuml;r fett und <span class="tag">&lt;i&gt;</span> bzw. <span class="tag">&lt;/i&gt;</span> f&uuml;r kursiv. Achten Sie hierbei auf die Verschachtelung der Tags. Der erste Tag muß als letzter geschlossen werden, der zweite Tag als vorletzter, usw. 
+<br /><br />
+Viele Tags k&ouml;nnen zudem Attribute enthalten, die die Eigenschaften der Tags steuern. Den Attributen m&uuml;ssen Werte zugewiesen werden.
+<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">Hier wird eine Trennlinie erzeugt.&lt;hr noshade=&quot;noshade&quot; width=&quot;150&quot; align=&quot;left&quot; /&gt;</td>
+ </tr>
+</table>
+<br />
+Das Attribut <span class="tag_attrs">&nbsp;noshade=&quot;</span><span class="tag_values_standalone">noshade</span><span class="tag_attrs">&quot;</span> besagt, daß die Trennlinie ohne Schattierung dargestellt wird. Dem Attribut <span class="tag_attrs">width</span> wurde der Wert &quot;<span class="tag_values">150</span>&quot; zugewiesen, und stellt somit die Breite der Linie mit 150 Pixel dar. Das Attribut <span class="tag_attrs">align</span> besitzt die Eigenschaft &quot;<span class="tag_values_defined">left</span>&quot;. Die Linie wird also linksb&uuml;ndig ausgerichtet.
+<hr />
+Hier sehen Sie ein einfaches Beispiel, das das Grundger&uuml;st einer XHTML - Datei darstellt. Diese Angaben <b>m&uuml;ssen mindestens</b> in einer Seite angegeben werden: 
+<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;<br />&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br /><br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;de&quot; lang=&quot;de&quot;&gt;<br />&lt;head&gt;<br />&nbsp;&lt;title&gt;Titel der Homepage&lt;/title&gt;<br />&lt;/head&gt;<br /><br />&lt;body&gt;<br /><br />... Weitere Objekte ...<br /><br />&lt;/body&gt;<br />&lt;/html&gt;</td>
+ </tr>
+</table>
+<br />
+
+Der erste Tag enth&auml;lt Informationen &uuml;ber die XML - Version und den verwendeten Zeichensatz (&quot;iso-8859-1&quot; steht f&uuml;r Deutschland).<br><br>
+Der n&auml;chste Tag bildet bereits das Kernst&uuml;ck der XHTML. Hier wird der Ort der DTD (Document Type Definition) angegeben. In dieser Datei sind die Tags und deren Attribute enthalten. Ihre eigene DTD k&ouml;nnte z.B. auch auf &quot;http://www.scribe.de/tags.dtd&quot; liegen.<br /><br />
+Der Tag <span class="tag">&lt;html&gt;</span> leitet des XHTML - Dokument ein.<br /><br />
+<span class="tag">&lt;head&gt;</span> beschreibt den &quot;Kopf&quot; des Dokuments, in dem sich <span class="arrow">&raquo;</span>&nbsp;<a href="tag_meta.html" class="normal">Metatags</a>, JavaScript&reg;- und CSS-Inhalte befinden.<br /><br />
+<span class="tag">&lt;title&gt;</span> definiert den Text, der in der Titelleiste des Browsers angezeigt wird.<br /><br />
+Der Tag <span class="tag">&lt;body&gt;</span> beschreibt den &quot;K&ouml;rper&quot; des Dokuments, der Objekte wie Grafiken und Formulare enth&auml;lt. Ihm k&ouml;nnen nat&uuml;rlich auch <span class="arrow">&raquo;</span>&nbsp;<a href="tag_body.html" class="normal">Attribute</a> zugewiesen werden. 
+</p>
+</body>
+</html>

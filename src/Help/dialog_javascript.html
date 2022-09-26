@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+ <title>Scribe! - Hilfe</title>
+ <meta name="generator" content="Scribe! 2 [http://scribe.de]" />
+ <meta name="author" content="Jan Uhlenbrok" />
+ <link rel="stylesheet" type="text/css" href="layout.css" />
+ <script language="JavaScript">
+ <!--
+  function select_target()
+  {
+   s_index = document.select_box.select_entries.selectedIndex;
+   s_text = document.select_box.select_entries.options[s_index].value;
+   if (s_text != "")
+    document.location.href = s_text;
+  }
+ //-->
+ </script>
+ <script language="JavaScript">
+ <!--
+  var TickerID = Object;
+  var Ticker_Text = new Object();
+  var Ticker_Speed = 20;
+  var Ticker_Pause = 1000;
+  var Ticker_Position = 0; Ticker_Count = 1; Ticker_TextMax = 3;
+  
+  Ticker_Text[1] = "Scribe! 2";
+  Ticker_Text[2] = "generation x";
+  Ticker_Text[3] = "web editor";
+  
+  function ticker_scroll()
+  {
+   document.ticker_box.ticker_textbox.value = Ticker_Text[Ticker_Count].substring(0, Ticker_Position);
+   if (Ticker_Position ++== Ticker_Text[Ticker_Count].length)
+   {
+    Ticker_Position = 0;
+    TickerID = setTimeout("ticker_scroll()", Ticker_Pause);
+    Ticker_Count++;
+    if (Ticker_Count == Ticker_TextMax + 1)
+     Ticker_Count = 1;
+   }
+   else
+    TickerID = setTimeout("ticker_scroll()", Ticker_Speed);
+  }
+ //-->
+ </script>
+ <script language="JavaScript">
+ <!--
+  var BannerID = Object;
+  var Text = new Object();
+  var Speed = 100;
+  var Position = 0;
+  var Length = 120;
+  
+  Text[1] = "Scribe! 2";
+  Text[2] = "generation x";
+  Text[3] = "web editor";
+  
+  var Msg = Message(3);
+  
+  function Message(Count)
+  {
+   Msg = Spacer(Length, " ");
+   for (var i = 1; i <= Count; i++)
+    Msg += Text[i] + "          ";
+   Msg += Spacer(Length, " ");
+   return Msg;
+  }
+  
+  function Spacer(Len, Asc)
+  {
+   var Space = "";
+   if (Asc > " ")
+   {
+    for (i = 1; i <= Len/2; i++)
+     Space += " ";
+    for (i = Len/2; i <= Len/2 + 3; i++)
+     Space += Asc + " ";
+    for (i = Len/2; i <= Len; i++)
+     Space += " ";
+   }
+   else
+   {
+    for (i = 1; i <= Len; i++)
+     Space += " ";
+   }
+   return Space;
+  }
+    
+  function scrolltext()
+  {
+   window.status = Msg.substring(Position, Position + Length);
+   if (Position ++== Msg.length - Length)
+    Position = 0;
+   BannerID = setTimeout("scrolltext()", Speed);
+  }
+ //-->
+ </script>
+</head>
+
+<body onLoad="ticker_scroll(); scrolltext();">
+<p align="center">
+<span class="header">D e r&nbsp;&nbsp;&nbsp;E d i t o r</span><br />
+<span class="subheader">JavaScript&reg; - Vorlagen</span>
+</p>
+<p align="justify">
+Mit Hilfe dieses Dialogs lassen sich einfach n&uuml;tzliche JavaScripts&reg; in ein Dokument einbinden. Achten Sie bitte darauf, daß die Option <span class="menue">&nbsp;Tags automatisch positionieren&nbsp;</span> in den Optionen aktiviert ist.<br /><br />
+
+<span class="menue_head">&nbsp;Highlight-Grafiken&nbsp;</span><br />
+Dieses Script &auml;ndert das Aussehen einer Grafik, sobald sich der Mauszeiger im Bereich der Grafik befindet. Außerdem ist die Grafik mit einem <span class="arrow">&raquo;</span>&nbsp;<a href="tag_ahref.html" class="normal">Hyperlink</a> unterlegt.<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example"><a href="index.html" onMouseover="image_0.src='graphics/javascript_example_2.gif';" onMouseout="image_0.src='graphics/javascript_example_1.gif';"><img name="image_0" src="graphics/javascript_example_1.gif" border="0" /></a></td>
+ </tr>
+</table>
+
+<hr />
+
+<span class="menue_head">&nbsp;Link-Auswahl&nbsp;</span><br />
+Es wird eine Auswahlliste angezeigt, die verschiedene Verweise enth&auml;lt. Sobald der Besucher ein Ziel ausw&auml;hlt, wird der dazugeh&ouml;rige Hyperlink ausgef&uuml;hrt.<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">
+   <form name="select_box">
+    <select name="select_entries" size="1" style="font-family:Tahoma; font-size:11px;" onChange="select_target();">
+     <option value="">Tag auswählen</option>
+     <option value="">--------------</option>
+     <option value="tag_ahref.html">Hyperlink</option>
+     <option value="tag_img.html">Grafik</option>
+     <option value="tag_meta.html">Metatag</option>
+    </select>
+   </form>
+  </td>
+ </tr>
+</table>
+
+<hr />
+
+<span class="menue_head">&nbsp;Ticker&nbsp;</span><br />
+Dieses Script l&auml;sst einen Text ab&quot;tickern&quot;.<br />
+Stammt urspr&uuml;nglich von <span class="arrow">&raquo;</span>&nbsp;<a href="http://members.aol.com/ChrisSkrip/Java/jarchiv.html" target="_blank" class="normal">Christian Künz</a> und wurde leicht ge&auml;ndert.<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">
+   <form name="ticker_box">
+    <input type="text" name="ticker_textbox" size="40" style="font-family:Tahoma; font-size:11px;" />
+   </form>
+  </td>
+ </tr>
+</table>
+
+<hr />
+
+<span class="menue_head">&nbsp;Laufschrift&nbsp;</span><br />
+In der Statuszeile des Browser (meist links unten) wird eine Laufschrift angezeigt.<br />
+Stammt ebenfalls urspr&uuml;nglich von <span class="arrow">&raquo;</span>&nbsp;<a href="http://members.aol.com/ChrisSkrip/Java/jarchiv.html" target="_blank" class="normal">Christian Künz</a> und wurde leicht ge&auml;ndert.<br /><br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tag_info_attrs">
+ <tr>          
+  <td colspan="2" class="xhtml_example_caption">&nbsp;Beispiel</td>
+ </tr>
+ <tr>
+  <td class="xhtml_example">&nbsp;Siehe Statuszeile</td>
+ </tr>
+</table>
+
+<br /><br />
+<img src="graphics/tip.gif" alt="" height="16" width="16" border="0" />
+Wenn Sie die beiden Scripts &quot;Ticker&quot; und &quot;Laufschrift&quot; innerhalb des selben Dokuments verwenden, m&uuml;ssen Sie im <span class="tag">&lt;body&gt;</span> - Tag die beiden Attribute<br /><span class="tag_attrs">onLoad=&quot;ticker_scroll();&quot; onLoad=&quot;scrolltext();&quot;</span><br /> zu <br /><span class="tag_attrs">onLoad=&quot;ticker_scroll(); scrolltext();&quot;</span><br /> zusammenfassen.
+
+
+</p>
+</body>
+</html>
